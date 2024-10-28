@@ -1,0 +1,35 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="Finalwork1.RestaurantListPage"
+             Title="Рестораны">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label Text="Список Ресторанов"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <ListView x:Name="RestaurantListView" ItemSelected="OnRestaurantSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="10">
+                                <Label Text="{Binding Name}" 
+                                       VerticalOptions="Center" 
+                                       HorizontalOptions="StartAndExpand" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button Text="Добавить Ресторан"
+                    Clicked="OnAddRestaurantButtonClicked" 
+                    VerticalOptions="Center" />
+
+            <Button Text="Удалить"
+                    Clicked="OnDeleteRestaurantClicked"
+                    VerticalOptions="Center" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

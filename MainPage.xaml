@@ -1,0 +1,14 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="Finalwork1.MainPage"
+             Title="Главная Страница">
+    <StackLayout Padding="20">
+        <Label Text="Добро пожаловать в приложение ресторанов!"
+               FontSize="24"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <Button Text="Посмотреть рестораны"
+                Clicked="OnViewRestaurantsButtonClicked" />
+    </StackLayout>
+</ContentPage>
